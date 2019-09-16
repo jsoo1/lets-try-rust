@@ -48,7 +48,7 @@
   (lets-try-rust-chapter
    #:name* "guessing-game"
    #:version* "0.1.0"
-   #:hash "1nqxirmghsw90cca66b7k0diq00grxbls9h3bvw5qz5blcwm9lrv"
+   #:hash "141fbxj91lwzf5xwsgzbszm0ga60z3fxfmw4j2z3d6w4n23hpr8c"
    #:dir "guessing_game"
    #:deps `(("rust-rand" ,rust-rand-0.6.5))
    #:desc "Guess a Rusty number."))
