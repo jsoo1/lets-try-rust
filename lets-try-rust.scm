@@ -7,7 +7,7 @@
   #:use-module (rust-xyz))
 
 
-(define (lets-try-rust-src name version)
+(define (lets-try-rust-src name version hash)
   (origin
     (method git-fetch)
     (uri (git-reference
@@ -16,14 +16,14 @@
     (file-name (git-file-name name version))
     (sha256
      (base32
-      "0iqrg9p23s4xz14aqb47116zq94654kr5gq7ljqiv61h9s1i0hwa"))))
+      hash))))
 
-(define* (lets-try-rust-chapter #:key name* version* dir (deps '()) desc)
+(define* (lets-try-rust-chapter #:key name* version* hash dir (deps '()) desc)
   (let ((n (string-append "lets-try-rust-" name*)))
     (package
       (name n)
       (version version*)
-      (source (lets-try-rust-src n version*))
+      (source (lets-try-rust-src n version* hash))
       (build-system cargo-build-system)
       (arguments
        `(#:cargo-inputs ,deps
@@ -40,6 +40,7 @@
   (lets-try-rust-chapter
    #:name* "hello-world"
    #:version* "0.0.0"
+   #:hash "0iqrg9p23s4xz14aqb47116zq94654kr5gq7ljqiv61h9s1i0hwa"
    #:dir "hello_world"
    #:desc "Hello Rusty World!"))
 
@@ -47,6 +48,7 @@
   (lets-try-rust-chapter
    #:name* "guessing-game"
    #:version* "0.1.0"
+   #:hash "1nqxirmghsw90cca66b7k0diq00grxbls9h3bvw5qz5blcwm9lrv"
    #:dir "guessing_game"
    #:deps `(("rust-rand" ,rust-rand-0.6.5))
    #:desc "Guess a Rusty number."))
