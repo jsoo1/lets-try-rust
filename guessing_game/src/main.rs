@@ -13,7 +13,13 @@ fn main() {
             "Failed to read guess.",
         );
 
-        let guess: u32 = guess.trim().parse().expect("Please enter a number");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Enter a number");
+                continue;
+            }
+        };
 
         match guess.cmp(&secret) {
             Ordering::Less => println!("Too small"),
