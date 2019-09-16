@@ -40,7 +40,7 @@
   (lets-try-rust-chapter
    #:name* "hello-world"
    #:version* "0.0.0"
-   #:hash "0iqrg9p23s4xz14aqb47116zq94654kr5gq7ljqiv61h9s1i0hwa"
+   #:hash "0wmgkzrd0lq4mah3vpbra1ip01i5nxjd5bxh2mkbv80mza0nh42a"
    #:dir "hello_world"
    #:desc "Hello Rusty World!"))
 
@@ -48,7 +48,7 @@
   (lets-try-rust-chapter
    #:name* "guessing-game"
    #:version* "0.1.0"
-   #:hash "141fbxj91lwzf5xwsgzbszm0ga60z3fxfmw4j2z3d6w4n23hpr8c"
+   #:hash "0j8pc4ms45wrr7371sinbgx7y0lb33xz8fliwkxgqahhfx92ss3x"
    #:dir "guessing_game"
    #:deps `(("rust-rand" ,rust-rand-0.6.5))
    #:desc "Guess a Rusty number."))
