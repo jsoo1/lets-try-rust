@@ -50,5 +50,22 @@
    #:version* "0.1.0"
    #:hash "0j8pc4ms45wrr7371sinbgx7y0lb33xz8fliwkxgqahhfx92ss3x"
    #:dir "guessing_game"
-   #:deps `(("rust-rand" ,rust-rand-0.6.5))
+   #:deps `(("rust-rand" ,rust-rand-0.6))
    #:desc "Guess a Rusty number."))
+
+(define-public variables
+  (lets-try-rust-chapter
+   #:name* "variables"
+   #:version* "0.1.0"
+   #:hash "0j8pc4ms45wrr7371sinbgx7y0lb33xz8fliwkxgqahhfx92ss3x"
+   #:dir "variables"
+   #:deps '()
+   #:desc "About variables in Rust."))
+
+(define-public functions
+  #:name* "functions"
+  #:version* "0.1.0"
+  #:hash  "0j8pc4ms45wrr7371sinbgx7y0lb33xz8fliwkxgqahhfx92ss3x"
+  #:dir "functions"
+  #:deps '()
+  #:desc "About functions in Rust.")
